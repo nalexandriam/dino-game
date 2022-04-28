@@ -1,0 +1,98 @@
+.dino {
+    height: 60px;
+    width: 60px;
+    background-image: url('dino.png');
+}
+.start{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: row ;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    
+}
+.start img{
+    background-color: black;
+}
+.btn{
+    position: absolute;
+    border-radius: 20%;
+    padding: 2rem;
+    color:aliceblue;
+    border: solid red 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    animation-name: btn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards ;
+}
+@keyframes btn {
+    0%{top:-250px;}
+    100%{top:50%}
+}
+.btn:hover{
+    background-color: rgb(255, 22, 14);
+}
+.cactus {
+    height: 60px;
+    width: 60px;
+    background-image: url('cactus.png');
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.background {
+    height: 100%;
+    width: 100%;
+    background-image: url('background.png');
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: fixed;
+    animation: background /*500s infinite linear forwards*/;
+    animation-duration: 500s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#gameover{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    flex-direction: row ;
+    width: 100vw;
+    height: 100vh;
+    animation-name: gameover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#gameover div {
+    position: absolute;
+    text-align: center;
+}
+#gameover div > img{
+    animation-name: gameoverImg;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes background{
+    0%{
+        background-position:0%;
+    }
+  100%{
+      background-position:50000%;
+    }
+}
+
+@keyframes gameover{
+    0%{width: 1rem;height: 1rem;}
+    100%{width: 100vw; height: 100vh;}
+}
+@keyframes gameoverImg {
+    0%{width: 1rem;height: 1rem;}
+    100%{width: 100%; height: 100%;}
+}
